@@ -185,7 +185,7 @@ $(document).ready(function(){
     // Reading new_bag_words dataset for Word_Cloud Viz
     $.ajax({
         type: "GET",
-        url: "/data/new_bag_words.csv",
+        url: "./data/new_bag_words.csv",
         dataType: "text",
         success: function(data){
             processData(data);
@@ -196,7 +196,7 @@ $(document).ready(function(){
     // Loading Review Map data
     $.ajax({
         type: "GET",
-        url: "/data/new_review_map.csv",
+        url: "./data/new_review_map.csv",
         dataType: "text",
         success: function(data){
             processData_map(data);

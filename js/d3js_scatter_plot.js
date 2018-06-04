@@ -14,7 +14,7 @@ $(document).ready(function(){
     let h = HEIGHT - margin.top - margin.bottom
     let w = WIDTH - margin.left - margin.right
     let formatPercent = d3.format('')
-    var dataPath = '/data/top_review_top_salerank.csv';
+    var dataPath = './data/top_review_top_salerank.csv';
 
     // tooltip for Scatter Plot : mouseover event
     let tooltip = d3.select("body").append("div").attr("class", "tooltip_ext");

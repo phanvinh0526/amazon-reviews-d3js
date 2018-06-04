@@ -6,7 +6,7 @@ $(document).ready(function(){
     var album_loc = '#network_detail';
     var WIDTH = $(network_loc).width();
     var HEIGHT = 700;
-    var dataPath = '/data/New_Network_Graph.json';
+    var dataPath = './data/New_Network_Graph.json';
     var N = 100; // total number of nodes
     var nodeArray = null;
     var linkArray = null;

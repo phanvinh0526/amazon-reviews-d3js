@@ -180,7 +180,7 @@ $(document).ready(function(){
     // Reading new_bag_words dataset for Word_Cloud Viz
     $.ajax({
         type: "GET",
-        url: "/data/reviews_histogram.csv",
+        url: "./data/reviews_histogram.csv",
         dataType: "text",
         success: function(data){
             processData(data);
