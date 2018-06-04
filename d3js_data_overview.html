@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>D3 SVG Primitives</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="/css/d3js.css">
+
+    </head>
+    <body>
+        <!-- ******** Top header ************ -->
+        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">FIT5147 Data Viz Project</a>
+            <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+            <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+                </li>
+            </ul> -->
+        </nav>
+        <div class="container-fluid">
+        <!-- ******** Navigation ************ -->
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="./d3js_home.html">
+                    <span data-feather="home"></span>
+                    Dashboard <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./d3js_scatter_plot.html">
+                    <span data-feather="database"></span>
+                    Data Overview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./d3js_word_cloud.html">
+                    <span data-feather="bar-chart-2"></span>
+                    Customer Satisfaction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./d3js_network_graph.html">
+                    <span data-feather="activity"></span>
+                    Product Similarity
+                    </a>
+                </li>
+                
+    
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Saved reports</span>
+                <a class="d-flex align-items-center text-muted" href="#">
+                    <span data-feather="plus-circle"></span>
+                </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    <span data-feather="file-text"></span>
+                    Current month
+                    </a>
+                </li> -->
+                
+                </ul>
+            </div>
+            </nav>
+            <!-- /******** Navigation ************ -->
+        
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" id="first" >
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h2 class="bd-title text-primary">Data Overview: Reviews, Product Metadata</h2>
+                
+                </div>
+
+            <!-- First Page -->
+                <div class="row justify-content-md-center full-height">
+                    <h4 class="bd-title text-success">Reviews Data Distribution</h4>
+                    <div class="col-md-10">
+                        <!-- Visualization : Bar Plot -->
+                        <div class="row" id="reviews_histogram"></div>
+                        <div class="row">
+                            <ul>
+                                <li>In 2015, the number of reviews increased significantly, then went down dramatically until 2010</li>
+                                <li>By hovering the bars, we can see in detail the review number every year</li>
+                                <li>However, the recent reviews are more valuable than obsolete ones</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+            <!-- Second page -->
+            <div class="row justify-content-md-center full-height" id="second" >
+                    <h4 class="bd-title text-success exclude-nav-bar">Correlation: Top Sales Rank vs Top Reviews</h4>
+                    <div class="col-md-10">
+                        <!-- Visualization : Scatter Plot -->
+                        <div class="cat-main-frame">
+                            <div class="legend1"> <p class="cat-name"><span class="key-dot top-review"></span>Top Review</p> </div>
+                            <div class="legend1"> <p class="cat-name"><span class="key-dot top-salesrank"></span>Top Sales Rank</p> </div>
+                            <div class="legend1"> <p class="cat-name"><span class="key-dot top-overlapped"></span>Overlapped Items</p> </div>
+                        </div>
+                        <div id="scatter_plot">
+                            
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>We can see that the Top Sales Rank items have low popularity while the most popular items have low sale ranking</li>
+                                <li><p>
+                                    For example,
+                                        the highest reviewed item is <strong>"21 Limited Edition of Adele"</strong> at the top right cornor of the map.
+                                        It also has lowest Sale Rank compared with others. This is because
+                                        <ul><li>
+                                            "21 Limited Edition" was published on the Internet, such as Youtube, Spotify, Apple Music.
+                                            This leads to low sales, but high popularity</li>
+                                            <li>
+                                            Also, the Price is too high, at $45.97 AUS, which probably make customers hesitant 
+                                            </li>
+                                        </ul>
+                                </p></li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+            </div>
+
+        <!-- story button : floating butn -->
+                <a href="#first" id="float-btn">
+                    <button type="button" class="btn btn-success btn-lg btn-circle btn-play faa-burst animated">
+                        <span data-feather="play" class=""></span>
+                    </button>
+                </a>
+            </main>
+        </div>
+        </div>
+            
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+        <!-- Icons -->
+        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+        
+
+        <!-- External Libs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+        <!-- New Libraries -->
+        <script type="text/javascript" src="/js/d3js_legend.js"></script>
+        <script type="text/javascript" src="/js/d3js_scatter_plot.js"></script>
+        <script type="text/javascript" src="/js/d3js_reviews_histogram.js"></script>
+
+        <script type="text/javascript" src="/js/d3js.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,405 @@
+/* *************** Sidebar Navigation **************** */
+body {
+font-size: .875rem;
+}
+
+.feather {
+width: 16px;
+height: 16px;
+vertical-align: text-bottom;
+}
+
+/*
+* Sidebar
+*/
+
+.sidebar {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+z-index: 100; /* Behind the navbar */
+padding: 48px 0 0; /* Height of navbar */
+box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+position: relative;
+top: 0;
+height: calc(100vh - 48px);
+padding-top: .5rem;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+}
+
+.sidebar .nav-link {
+font-weight: 500;
+color: #333;
+}
+
+.sidebar .nav-link .feather {
+margin-right: 4px;
+color: #999;
+}
+
+.sidebar .nav-link.active {
+color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+color: inherit;
+}
+
+.sidebar-heading {
+font-size: .75rem;
+text-transform: uppercase;
+}
+
+/*
+* Content
+*/
+
+[role="main"] {
+padding-top: 48px; /* Space for fixed navbar */
+}
+
+/*
+* Navbar
+*/
+
+.navbar-brand {
+padding-top: .75rem;
+padding-bottom: .75rem;
+font-size: 1rem;
+background-color: rgba(0, 0, 0, .25);
+box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+padding: .75rem 1rem;
+border-width: 0;
+border-radius: 0;
+}
+
+.form-control-dark {
+color: #fff;
+background-color: rgba(255, 255, 255, .1);
+border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+border-color: transparent;
+box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/*
+* Utilities
+*/
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* *********************************************************** */
+.btn-sq-lg {
+width: 150px !important;
+height: 150px !important;
+}
+
+.btn-sq {
+width: 50px !important;
+height: 50px !important;
+font-size: 10px;
+}
+
+.btn-sq-sm {
+width: 50px !important;
+height: 50px !important;
+font-size: 10px;
+}
+
+.btn-sq-xs {
+width: 25px !important;
+height: 25px !important;
+padding:2px;
+}
+
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #2196F3;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+/* div-mid */
+.div-mid{
+    margin-top: 30px;
+    margin-left: 50px;
+
+}
+
+
+body{
+    background-color: #F1F3F3
+}
+.axis path,
+.axis line {
+fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+.splegend {
+    margin-top:40px;
+    width: 120px;
+    height: 300px;
+    float:left;
+    left: 250px;
+    position: relative;
+}
+.legText {
+    color:black;
+    font-family: 'Lato', Helvetica, sans-serif; font-weight: 300;
+    font-size:9pt;
+}
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+.legend rect {
+    fill:white;
+    stroke:black;
+    opacity:0.8;
+}
+
+.bar {
+    fill: #19a80a;
+}
+
+.bar:hover {
+    fill: rgb(219, 63, 63);
+}
+
+.axis--x path {
+    display: none;
+}
+
+.tooltip_ext {
+    position: absolute;
+    display: none;
+    min-width: 80px;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    opacity: 0.8;
+    border: 1px solid #6F257F;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+.hard-svg-size{
+    min-width: 800;
+    min-height: 500;
+
+}
+.hard-bar-size{
+    min-width: 500;
+    min-height: 570;
+}
+
+/* Custom */
+
+.full-height{
+    height: -o-calc(100% - 48px); /* opera */
+    height: -webkit-calc(100% - 48px); /* google, safari */
+    height: -moz-calc(100% - 48px); /* firefox */
+}
+
+.exclude-nav-bar{
+    margin-top: 48px;
+}
+
+/* Floating button */
+.btn-group-sm .btn-fab{
+    position: fixed !important;
+    right: 29px;
+}
+.btn-group .btn-fab{
+    position: fixed !important;
+    right: 20px;
+}
+#story-btn{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+.story-btn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Circle Button */
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+  }
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+}
+
+/* WAVE */
+@keyframes burst {
+	0% {opacity:1}
+	50% {transform:scale(1.2);opacity:0.8}
+	100%{opacity:0.8}
+}
+.faa-burst.animated,
+.faa-burst.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-burst {
+	animation: burst 2s infinite linear
+}
+.faa-burst.animated.faa-fast,
+.faa-burst.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover > .faa-burst.faa-fast {
+	animation: burst 1s infinite linear
+}
+.faa-burst.animated.faa-slow,
+.faa-burst.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-burst.faa-slow {
+	animation: burst 3s infinite linear
+}
+
+/* Right Bottom of a Page */
+
+.btn-play{
+    position: fixed !important;
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+}
+
+
+/* HTML Vertical Legend for Scatter Plot */
+
+.cat-main-frame{
+    margin: 0 !important;
+
+}
+
+.cat-name {
+    margin: 0 !important;
+}
+
+.key-dot {
+    display: inline-block;
+    height: 10px;
+    margin-right: .5em;
+    width: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #999
+}
+
+.legend {
+    margin-right:20px;
+}
+
+.top-review { background: #b2e575;}
+.top-salesrank { background: #90bddf;}
+.top-overlapped { background: #fff50a;
+}
+
