@@ -83,7 +83,10 @@ $(document).ready(function(){
 
             data[i].salesRank_n = Math.log(data[i].salesRank)
             data[i].numReviews_n = Math.log(data[i].numReviews)
-            data[i].weight_n = data[i].salesRank_n + data[i].numReviews_n
+            if(data[i].price >= 35)
+                data[i].weight_n = data[i].price - 8
+            else
+                data[i].weight_n = data[i].price
         }
 
         // ************************************************ //

@@ -4,13 +4,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         
-        <link rel="stylesheet" href="/css/d3js.css">
+        <link rel="stylesheet" href="./css/d3js.css">
 
     </head>
     <body>
         <!-- ******** Top header ************ -->
         <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">FIT5147 Data Viz Project</a>
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="./d3js_data_overview.html">FIT5147 Data Viz Project</a>
             <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
@@ -25,13 +25,7 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="./d3js_home.html">
-                    <span data-feather="home"></span>
-                    Dashboard <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./d3js_scatter_plot.html">
+                    <a class="nav-link active" href="./d3js_data_overview.html">
                     <span data-feather="database"></span>
                     Data Overview
                     </a>
@@ -81,6 +75,7 @@
                     <div class="col-md-10">
                         <!-- Visualization : Bar Plot -->
                         <div class="row" id="reviews_histogram"></div>
+                        <br>
                         <div class="row">
                             <ul>
                                 <li>In 2015, the number of reviews increased significantly, then went down dramatically until 2010</li>
@@ -120,6 +115,11 @@
                                             </li>
                                         </ul>
                                 </p></li>
+                                <li>
+                                    Looking at the big yellow circle on the right site, album <strong>"I Dreamed a Dream"</strong>,
+                                    it's a profitable album and fast movement. It has either popularity from public or high sales rank on Amazon 
+                                    as well as high profit (the circle size).
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -147,13 +147,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
-        
-        <!-- New Libraries -->
-        <script type="text/javascript" src="/js/d3js_legend.js"></script>
-        <script type="text/javascript" src="/js/d3js_scatter_plot.js"></script>
-        <script type="text/javascript" src="/js/d3js_reviews_histogram.js"></script>
 
-        <script type="text/javascript" src="/js/d3js.js"></script>
+        <!-- New Libraries -->
+        <script type="text/javascript" src="./js/d3js_legend.js"></script>
+        <script type="text/javascript" src="./js/d3js_scatter_plot.js"></script>
+        <script type="text/javascript" src="./js/d3js_reviews_histogram.js"></script>
+
+        <script type="text/javascript" src="./js/d3js.js"></script>
 
     </body>
 </html>

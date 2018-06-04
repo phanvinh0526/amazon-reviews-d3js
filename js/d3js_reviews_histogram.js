@@ -8,7 +8,7 @@ function drawHistogram(data){
 
     // dynamic resolutionx
     let swidth = $(svg_his_location).width();
-    let sheight = 400;
+    let sheight = 500;
 
     // draw viz frame
     let svg = d3.select(svg_his_location)
@@ -65,6 +65,7 @@ function drawHistogram(data){
         .attr("y", function(d) { return yScale(d.reviews); })
         .attr("width", xScale.rangeBand())
         .attr("height", function(d) { return height - yScale(d.reviews); })
+        .attr("opacity", 0.8)
         .on("mousemove", function(d){
             // console.log(d.reviews);
             tooltip
